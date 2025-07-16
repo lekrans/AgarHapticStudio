@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		E14DA7AF2E27C5E200EB7D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14DA7992E27C5E000EB7D12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14DA7A02E27C5E000EB7D12;
+			remoteInfo = AgarHapticStudio;
+		};
+		E14DA7B92E27C5E200EB7D12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E14DA7992E27C5E000EB7D12 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E14DA7A02E27C5E000EB7D12;
+			remoteInfo = AgarHapticStudio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E14DA7A12E27C5E000EB7D12 /* AgarHapticStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgarHapticStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14DA7AE2E27C5E200EB7D12 /* AgarHapticStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgarHapticStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14DA7B82E27C5E200EB7D12 /* AgarHapticStudioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgarHapticStudioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E14DA7A32E27C5E000EB7D12 /* AgarHapticStudio */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AgarHapticStudio;
+			sourceTree = "<group>";
+		};
+		E14DA7B12E27C5E200EB7D12 /* AgarHapticStudioTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AgarHapticStudioTests;
+			sourceTree = "<group>";
+		};
+		E14DA7BB2E27C5E200EB7D12 /* AgarHapticStudioUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = AgarHapticStudioUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E14DA79E2E27C5E000EB7D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7AB2E27C5E200EB7D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7B52E27C5E200EB7D12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E14DA7982E27C5E000EB7D12 = {
+			isa = PBXGroup;
+			children = (
+				E14DA7A32E27C5E000EB7D12 /* AgarHapticStudio */,
+				E14DA7B12E27C5E200EB7D12 /* AgarHapticStudioTests */,
+				E14DA7BB2E27C5E200EB7D12 /* AgarHapticStudioUITests */,
+				E14DA7A22E27C5E000EB7D12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E14DA7A22E27C5E000EB7D12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E14DA7A12E27C5E000EB7D12 /* AgarHapticStudio.app */,
+				E14DA7AE2E27C5E200EB7D12 /* AgarHapticStudioTests.xctest */,
+				E14DA7B82E27C5E200EB7D12 /* AgarHapticStudioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E14DA7A02E27C5E000EB7D12 /* AgarHapticStudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14DA7C22E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudio" */;
+			buildPhases = (
+				E14DA79D2E27C5E000EB7D12 /* Sources */,
+				E14DA79E2E27C5E000EB7D12 /* Frameworks */,
+				E14DA79F2E27C5E000EB7D12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E14DA7A32E27C5E000EB7D12 /* AgarHapticStudio */,
+			);
+			name = AgarHapticStudio;
+			packageProductDependencies = (
+			);
+			productName = AgarHapticStudio;
+			productReference = E14DA7A12E27C5E000EB7D12 /* AgarHapticStudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E14DA7AD2E27C5E200EB7D12 /* AgarHapticStudioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14DA7C52E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudioTests" */;
+			buildPhases = (
+				E14DA7AA2E27C5E200EB7D12 /* Sources */,
+				E14DA7AB2E27C5E200EB7D12 /* Frameworks */,
+				E14DA7AC2E27C5E200EB7D12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14DA7B02E27C5E200EB7D12 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E14DA7B12E27C5E200EB7D12 /* AgarHapticStudioTests */,
+			);
+			name = AgarHapticStudioTests;
+			packageProductDependencies = (
+			);
+			productName = AgarHapticStudioTests;
+			productReference = E14DA7AE2E27C5E200EB7D12 /* AgarHapticStudioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E14DA7B72E27C5E200EB7D12 /* AgarHapticStudioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14DA7C82E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudioUITests" */;
+			buildPhases = (
+				E14DA7B42E27C5E200EB7D12 /* Sources */,
+				E14DA7B52E27C5E200EB7D12 /* Frameworks */,
+				E14DA7B62E27C5E200EB7D12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14DA7BA2E27C5E200EB7D12 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E14DA7BB2E27C5E200EB7D12 /* AgarHapticStudioUITests */,
+			);
+			name = AgarHapticStudioUITests;
+			packageProductDependencies = (
+			);
+			productName = AgarHapticStudioUITests;
+			productReference = E14DA7B82E27C5E200EB7D12 /* AgarHapticStudioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E14DA7992E27C5E000EB7D12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					E14DA7A02E27C5E000EB7D12 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					E14DA7AD2E27C5E200EB7D12 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E14DA7A02E27C5E000EB7D12;
+					};
+					E14DA7B72E27C5E200EB7D12 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = E14DA7A02E27C5E000EB7D12;
+					};
+				};
+			};
+			buildConfigurationList = E14DA79C2E27C5E000EB7D12 /* Build configuration list for PBXProject "AgarHapticStudio" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E14DA7982E27C5E000EB7D12;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E14DA7A22E27C5E000EB7D12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E14DA7A02E27C5E000EB7D12 /* AgarHapticStudio */,
+				E14DA7AD2E27C5E200EB7D12 /* AgarHapticStudioTests */,
+				E14DA7B72E27C5E200EB7D12 /* AgarHapticStudioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E14DA79F2E27C5E000EB7D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7AC2E27C5E200EB7D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7B62E27C5E200EB7D12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E14DA79D2E27C5E000EB7D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7AA2E27C5E200EB7D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E14DA7B42E27C5E200EB7D12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E14DA7B02E27C5E200EB7D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14DA7A02E27C5E000EB7D12 /* AgarHapticStudio */;
+			targetProxy = E14DA7AF2E27C5E200EB7D12 /* PBXContainerItemProxy */;
+		};
+		E14DA7BA2E27C5E200EB7D12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E14DA7A02E27C5E000EB7D12 /* AgarHapticStudio */;
+			targetProxy = E14DA7B92E27C5E200EB7D12 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E14DA7C02E27C5E200EB7D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E14DA7C12E27C5E200EB7D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E14DA7C32E27C5E200EB7D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E14DA7C42E27C5E200EB7D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E14DA7C62E27C5E200EB7D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgarHapticStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgarHapticStudio";
+			};
+			name = Debug;
+		};
+		E14DA7C72E27C5E200EB7D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgarHapticStudio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgarHapticStudio";
+			};
+			name = Release;
+		};
+		E14DA7C92E27C5E200EB7D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgarHapticStudio;
+			};
+			name = Debug;
+		};
+		E14DA7CA2E27C5E200EB7D12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L9FWA288P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lekrans.AgarHapticStudioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgarHapticStudio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E14DA79C2E27C5E000EB7D12 /* Build configuration list for PBXProject "AgarHapticStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14DA7C02E27C5E200EB7D12 /* Debug */,
+				E14DA7C12E27C5E200EB7D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14DA7C22E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14DA7C32E27C5E200EB7D12 /* Debug */,
+				E14DA7C42E27C5E200EB7D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14DA7C52E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14DA7C62E27C5E200EB7D12 /* Debug */,
+				E14DA7C72E27C5E200EB7D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14DA7C82E27C5E200EB7D12 /* Build configuration list for PBXNativeTarget "AgarHapticStudioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14DA7C92E27C5E200EB7D12 /* Debug */,
+				E14DA7CA2E27C5E200EB7D12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E14DA7992E27C5E000EB7D12 /* Project object */;
+}
