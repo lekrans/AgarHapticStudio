@@ -11,7 +11,9 @@ import SwiftUI
 struct AgarHapticStudioApp: App {
     var body: some Scene {
         WindowGroup {
+//            Print("starting app")
             ContentView()
+                .environmentObject(TimelineViewModel())
         }
     }
 }
