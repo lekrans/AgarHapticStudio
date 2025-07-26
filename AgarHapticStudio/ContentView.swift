@@ -5,13 +5,15 @@
 //  Created by Michael Lekrans on 2025-07-16.
 //
 
+
+
+
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: TimelineViewModel
     @State private var timelineWidth: CGFloat = 1000
     var body: some View {
-//        Print("Start Content View")
         Text("Agar Haptic Studio")
             .font(.title)
             .bold(true)

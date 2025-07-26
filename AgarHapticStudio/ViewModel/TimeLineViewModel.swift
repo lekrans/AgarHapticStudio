@@ -33,8 +33,11 @@ class TimelineViewModel: ObservableObject {
     // MARK: - Initializer
     init() {
         print("TIMELINE VIEW MODEL INITIALIZING")
+//        generateExampleData(mode: .soundStartAtZero(noOfEvents: 2))
+//        generateExampleData(mode: .soundStartAtZero(noOfEvents: 4))
+        generateExampleData(mode: .soundAndHapticStartAtZero(noOfSoundEvents: 4, noOfHapticEvents: 4))
 //        generateExampleData(mode: .soundAndHapticStartAtZero(noOfSoundEvents: 3, noOfHapticEvents: 3))
-        playDataExampleModes()
+//        playDataExampleModes()
         
         //        eventsByTrack[soundTrack.id] = []
     }
@@ -266,10 +269,4 @@ class TimelineViewModel: ObservableObject {
         print("relativeTime after setting (\(event.normalizedStartTime))")
         // eventsByTrack[trackID] = event
     }
-    
-
-    
-    
-    
-    
 }

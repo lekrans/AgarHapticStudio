@@ -7,18 +7,6 @@
 //
 import SwiftUI
 
-
-
-
-
-import SwiftUI
-
-
-
-
-
-
-
 struct TimelineEditorView: View {
     @EnvironmentObject var viewModel: TimelineViewModel
     
@@ -35,52 +23,41 @@ struct TimelineEditorView: View {
                 
                 ZStack(alignment: .leading) {
                     // Timeline
-//                    ZStack {
-                        // Timeline background
-                        Rectangle()
-                            .fill(Color.black.opacity(0.05))
-                            .frame(width: timelineWidth, height: totalHeight)
-                        // Grid
-                        TimelineGrid(timelineWidth: timelineWidth, totalHeight: totalHeight)
-                        
-                        
-                        
-                        
-                        VStack(spacing: 0) {
-                            // HAPTIC TRACKS
-                            ForEach(viewModel.tracks.filter { $0.type == .haptic }) { track in
-                                TrackView(track: track, timelineWidth: timelineWidth, height: timelineTrackHeights.hapticTrackHeight)
-                            }
-                            
-                            Rectangle() // Center Divider Line
-                                .fill(Color.red)
-                                .frame(height: 1)
-                            
-                            // SOUND TRACKS
-                            ForEach(viewModel.tracks.filter { $0.type == .sound }) { track in
-                                TrackView(track: track, timelineWidth: timelineWidth, height: timelineTrackHeights.soundTrackHeight)
-                            }
-                        }
-//                         Events
-//                                            ForEach($viewModel.events) { $event in
-//                                                DraggableEventView(
-//                                                    event: $event,
-//                                                    totalDuration: viewModel.timelineDuration,
-//                                                    timelineWidth: timelineWidth,
-//                                                    allEvents: viewModel.events
-//                                                )
-                    }
+                    //                    ZStack {
+                    // Timeline background
+                    Rectangle()
+                        .fill(Color.black.opacity(0.05))
+                        .frame(width: timelineWidth, height: totalHeight)
+                    // Grid
+                    TimelineGrid(timelineWidth: timelineWidth, totalHeight: totalHeight)
                     
+                    
+                    
+                    
+                    VStack(spacing: 0) {
+                        // HAPTIC TRACKS
+                        ForEach(viewModel.tracks.filter { $0.type == .haptic }) { track in
+                            TrackView(track: track, timelineWidth: timelineWidth, height: timelineTrackHeights.hapticTrackHeight)
+                        }
+                        
+                        Rectangle() // Center Divider Line
+                            .fill(Color.red)
+                            .frame(height: 1)
+                        
+                        // SOUND TRACKS
+                        ForEach(viewModel.tracks.filter { $0.type == .sound }) { track in
+                            TrackView(track: track, timelineWidth: timelineWidth, height: timelineTrackHeights.soundTrackHeight)
+                        }
+                    }
                 }
-//            }
+            }
         }
-        //        .frame(height: height)
     }
     
     
-
-
-
+    
+    
+    
     /// Calculates the heights for the haptic, sound and animation track heights.
     ///
     /// If we have an animation track, it will be a 1/3 of the total timeline height.
@@ -99,15 +76,6 @@ struct TimelineEditorView: View {
         let soundTrackHeight: CGFloat = min(maxHeight, (availableHeight / CGFloat(2)) / CGFloat(viewModel.soundTracks.count)
         )
         let timelineTrackHeights = TimelineTrackHeights(animationHeight: animationHeight, hapticTrackHeight: hapticTrackHeight, soundTrackHeight: soundTrackHeight)
-//       Print("""
-//            
-//                totalHeight: \(totalHeight)
-//                availableHeight: \(availableHeight)
-//                maxHeight: \(maxHeight)
-//                animationHeight: \(animationHeight)
-//                hapticTrackHeight: \(hapticTrackHeight)
-//                soundTrackHeight: \(soundTrackHeight)
-//            """)
         return timelineTrackHeights
     }
 }

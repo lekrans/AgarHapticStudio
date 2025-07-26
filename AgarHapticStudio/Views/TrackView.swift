@@ -25,42 +25,33 @@ struct TrackView: View {
     let height: CGFloat
     
     var body: some View {
-        ZStack(alignment: .topLeading) {
+        ZStack(alignment: .bottomLeading) {
             // Background based on track type
             backgroundColor
                 .frame(height: height)
+//                .alignmentGuide(.bottom) { d in d[VerticalAlignment.bottom] }
                 .overlay(
                     Rectangle()
                         .stroke(.gray.opacity(0.3), lineWidth: 1)
                 )
-            
-            // Draggable Events
-//            ForEach(track.events) { event in
-//                DraggableEventView(
-//                    event: .constant(event), // Replace with real binding when needed
-//                    totalDuration: 1.5, // You can pass this from the model
-//                    timelineWidth: timelineWidth,
-//                    allEvents: track.events
-//                )
-//                .frame(height: height * 0.8)
-//            }
-            
-            if let event = viewModel.event(for: track) {
-//                Print("found event")
-                DraggableEventView(
-                    event: Binding(
-                        get: { event },
-                        set: { viewModel.eventsByTrack[track.id] = $0 }
-                    ),
-                    totalDuration: viewModel.timelineDuration,
-                    timelineWidth: timelineWidth,
-                    allEvents: viewModel.eventsByTrack.values.map { $0 },
-                    trackId: track.id,
-                    trackHeight: height
-                )
-                .position(x: 0, y: height/2)
-            }
-            
+
+                if let event = viewModel.event(for: track) {
+                    DraggableEventView(
+                        event: Binding(
+                            get: { event },
+                            set: { viewModel.eventsByTrack[track.id] = $0 }
+                        ),
+                        totalDuration: viewModel.timelineDuration,
+                        timelineWidth: timelineWidth,
+                        allEvents: viewModel.eventsByTrack.values.map { $0 },
+                        trackId: track.id,
+                        trackHeight: height
+                    )
+                    //                .frame(height: height)
+                    .alignmentGuide(.bottom) { d in d[VerticalAlignment.bottom] + 1 }
+                    .padding(.leading, 0)
+                }
+                
             // Optional Label
             HStack {
                 Text(track.type == .haptic ? "Haptic Track:" : "Sound Track:")
@@ -72,6 +63,7 @@ struct TrackView: View {
                     .foregroundColor(track.type == .haptic ? .blue.mix(with: .white, by: 0.7) : .green.mix(with: .white, by: 0.7))
                     .padding(.vertical, 4)
             }
+            .alignmentGuide(.bottom) { d in d[VerticalAlignment.bottom] + height - d.height } // Move the text from bottom aligned to be aligned at the top (if we don't remove it's own height (the text height) it will be positioned above the track
         }
         
     }
@@ -97,5 +89,5 @@ struct TrackView: View {
         .environmentObject(viewModel)
 }
 
-//TrackView(track: .init(id: .init(), type: .sound, name: ""), timelineWidth: 400, height: 100)
-//    .environmentObject(TimelineViewModel())
+
+

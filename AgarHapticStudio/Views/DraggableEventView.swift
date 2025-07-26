@@ -22,73 +22,33 @@ struct DraggableEventView: View {
         let denormalizedDuration = CGFloat(event.normalizedDuration * totalDuration)
         let denormalizedStartTime = totalDuration * event.normalizedStartTime
         let eventWidth: CGFloat = timelineWidth / totalDuration * denormalizedDuration
-//        let xPos = CGFloat(denormalizedStartTime / totalDuration) * timelineWidth + dragOffset
-//        let realStartPos = xPos + denormalizedDuration/2
-        let startPosX: CGFloat = timelineWidth/totalDuration * CGFloat(denormalizedStartTime) + eventWidth/2 + dragOffset
+//        let startOffsetX: CGFloat = timelineWidth/totalDuration * CGFloat(denormalizedStartTime) + eventWidth/2 + dragOffset
+        let startOffsetX: CGFloat = timelineWidth/totalDuration * CGFloat(denormalizedStartTime)
 
-//        Print("""
-//            ---------------------------------
-//            trackId: \(trackId)
-//            totalDuration: \(totalDuration)
-//            timelineWidth: \(timelineWidth)
-//            normalizedStartTime: \(event.normalizedStartTime)
-//            denormalizedStartTime: \(denormalizedStartTime)
-//            normalizedDuration: \(event.normalizedDuration)
-//            denormalizedDuration: \(denormalizedDuration)
-//            eventWidth: \(eventWidth)
-//            dragOffset: \(dragOffset)
-//            startPosX: \(startPosX)
-//            """)
-//        
-////
-//        Print("""
-//            ---- Track heights -------
-//            event: \(event)
-//            trackHeight: \(trackHeight)
-//        """)
         TimelineEventBlockView(event: event, timelineWidth: timelineWidth, totalDuration: totalDuration, trackHeight: trackHeight)
-//        Rectangle()
-//            .fill(Color.clear)
-//            .background(Color.cyan)
-//            .overlay(Text(event.label.prefix(1)).foregroundColor(.white))
-//            .frame(width: 24, height: 24)
-            .position(x: startPosX , y: trackHeight/2 )
+            .offset(x: startOffsetX)
+//            .frame(width: eventWidth, height: trackHeight * 0.8, alignment: .leading)
             .gesture(
                 DragGesture()
                     .onChanged { value in
-                        do {print("onChange") }
                         dragOffset = value.translation.width
                     }
                     .onEnded { value in
                         let delta = value.translation.width / timelineWidth * totalDuration
                         let denormalizedStartTime = totalDuration * event.normalizedStartTime
                         var newTime = denormalizedStartTime + delta
-//                        print("""
-//                                in onEnded2
-//                                timelineWidth: \(timelineWidth)
-//                                totalDuration: \(totalDuration)
-//                                value.translation.width \(value.translation.width)
-//                                delta: \(delta)
-//                                newTime: \(newTime)
-//                        """)
-//                        newTime = snapToNearbyEvent(newTime, allEvents: allEvents, currentEvent: event)
-//                        newTime = snapToGrid(newTime, interval: viewModel.gridInterval)
-//                        newTime = max(0, min(totalDuration, newTime))
-                        print("newTime: \(newTime)")
                         viewModel.moveEvent(in:trackId, to: newTime)
                         event.normalizedStartTime = newTime / totalDuration
                         dragOffset = 0
-                        print("leaving onEnded")
                     }
             )
             .animation(.easeOut(duration: 0.2), value: dragOffset)
-
     }
 }
 
 func snapToGrid(_ value: TimeInterval, interval: TimeInterval) ->
-    TimeInterval {
-//        Print("in SnapToGrid")
+TimeInterval {
+    //        Print("in SnapToGrid")
     let timeValue = value / interval
     let roundedTimeValue = timeValue.rounded()
     let diff = abs(timeValue - roundedTimeValue)
@@ -102,7 +62,6 @@ func snapToNearbyEvent(
     currentEvent: TimelineEvent,
     margin: TimeInterval = 0.05
 ) -> TimeInterval {
-    print("In snapToNearbyEvent")
     let others = allEvents.filter { $0.id != currentEvent.id }
     for other in others {
         if abs(other.normalizedStartTime - value) < margin {
