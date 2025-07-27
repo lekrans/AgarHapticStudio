@@ -41,7 +41,6 @@ struct TrackView: View {
                             get: { event },
                             set: { viewModel.eventsByTrack[track.id] = $0 }
                         ),
-                        totalDuration: viewModel.timelineDuration,
                         timelineWidth: timelineWidth,
                         allEvents: viewModel.eventsByTrack.values.map { $0 },
                         trackId: track.id,

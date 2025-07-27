@@ -269,4 +269,8 @@ class TimelineViewModel: ObservableObject {
         print("relativeTime after setting (\(event.normalizedStartTime))")
         // eventsByTrack[trackID] = event
     }
+    
+    func changeDuration(of event: inout TimelineEvent, to newDuration: TimeInterval) {
+        event.normalizedDuration = newDuration
+    }
 }

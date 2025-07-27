@@ -51,8 +51,8 @@ struct TimelineEvent: Identifiable, Equatable {
             return TimelineEvent(
                 type: type,
                 label: "Default Sound",
-                normalizedStartTime: 0,
-                normalizedDuration: 0.5
+                normalizedStartTime: 0.2,
+                normalizedDuration: 0.1
             )
         }
     }
