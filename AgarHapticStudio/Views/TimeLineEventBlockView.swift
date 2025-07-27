@@ -13,8 +13,10 @@ struct TimelineEventBlockView: View {
     let totalDuration: TimeInterval
     let trackHeight: CGFloat
     var height: CGFloat {
-        trackHeight * 0.8
+        trackHeight * 1
     }
+    var leftHandle = Rectangle()
+    var rightHandle = Rectangle()
     
     var body: some View {
         let widthPerSecond: CGFloat = (timelineWidth/totalDuration)
@@ -24,11 +26,14 @@ struct TimelineEventBlockView: View {
         ZStack {
                 
                 HStack {
-                    Rectangle()
+                    leftHandle
                         .frame(width: 10, height: height)
+                        .opacity(0.5)
+                        
                     Spacer()
-                    Rectangle()
+                    rightHandle
                         .frame(width: 10, height: height)
+                        .opacity(0.5)
                 }
                 .frame(width: width, height: height)
             
@@ -51,7 +56,7 @@ struct TimelineEventBlockView: View {
             }
 
         }
-        .cornerRadius(5)
+//        .cornerRadius(5)
 
     }
 }

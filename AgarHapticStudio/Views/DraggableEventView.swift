@@ -34,22 +34,70 @@ struct DraggableEventView: View {
         timelineWidth/viewModel.timelineDuration * CGFloat(realDuration)
     }
     
+    var height: CGFloat {
+        trackHeight * 0.8
+    }
+    
+    @State private var isRightTouched: Bool = false
+    @State private var isLeftTouched: Bool = false
+
     @State private var dragOffset: CGFloat = 0
     @State private var durationOffset: CGFloat = 0
     
     var body: some View {
-//        HStack {
-//            Rectangle()
-//                .frame(width: 10, height: trackHeight)
-//                .gesture(leftResizeGesture)
+        ZStack() {
             
-            TimelineEventBlockView(event: event, timelineWidth: timelineWidth, totalDuration: viewModel.timelineDuration, trackHeight: trackHeight)
-//            Rectangle()
-//                .frame(width: 10, height: trackHeight)
-//        }
+            TimelineEventBlockView(event: event, timelineWidth: timelineWidth, totalDuration: viewModel.timelineDuration, trackHeight: height)
+                .padding(0)
+                .cornerRadius(5)
+
+            
+            HStack(spacing: 0) { // Right handle
+                Spacer()
+                Rectangle()
+                    .padding(0)
+                    .frame(width: 10, height: height)
+                    .border(Color.red)
+                    .opacity(isRightTouched ? 0.7 : 0.1)
+                    .shadow(radius: 5)
+                    .gesture(DragGesture(minimumDistance: 0)
+                        .onChanged { _ in
+                            if !isRightTouched { isRightTouched = true }
+                        }
+                        .onEnded { _ in
+                            isRightTouched = false
+                        })
+                    .simultaneousGesture(rightResizeGesture)
+            }
+            .frame(width: realWidth)
+            .cornerRadius(5)
+
+            HStack(spacing: 0) {
+                Rectangle()
+                    .padding(0)
+                    .frame(width: 10, height: height)
+                    .border(Color.red)
+                    .opacity(isLeftTouched ? 0.7 : 0.1)
+                    .shadow(radius: 5)
+                    .gesture(DragGesture(minimumDistance: 0)
+                        .onChanged { _ in
+                            if !isLeftTouched { isLeftTouched = true }
+                        }
+                        .onEnded { _ in
+                            isLeftTouched = false
+                        })
+                    .simultaneousGesture(leftResizeGesture)
+                    .animation(.easeOut(duration: 0.2), value: dragOffset)
+
+                Spacer()
+            }
+            .frame(width: realWidth)
+            .cornerRadius(5)
+        }
         .offset(x: startOffsetX)
-        .frame(width: realWidth)
+//        .cornerRadius(5)
         .gesture( eventMoveGesture )
+        
         .animation(.easeOut(duration: 0.2), value: dragOffset)
         .onAppear {
             print("startOffsetX \(startOffsetX)")
@@ -79,19 +127,19 @@ struct DraggableEventView: View {
     var leftResizeGesture: some Gesture {
         DragGesture()
             .onChanged { value in
-                durationOffset = value.translation.width
-//                dragOffset = value.translation.width
-//                let delta = value.translation.width / timelineWidth * totalDuration
-//                print("delta \(delta), value.translation.width \(value.translation.width)")
-//                let newStart = max(0, event.normalizedStartTime + delta)
-//                let newDuration = event.normalizedDuration - delta
-                let newDuration = durationOffsetX
-                print("newDuration \(newDuration)")
-                guard newDuration > 0 else { return }
-                viewModel.changeDuration(of: &event, to: newDuration)
-//                event.normalizedStartTime = newStart
-//                event.normalizedDuration = newDuration
-//                viewModel.addEvent(event, to: trackId)
+                print("in leftResizeGesture change")
+                
+            }
+            .onEnded { value in
+                print("In leftResizeGesture end")
+                dragOffset = 0
+                durationOffset = 0
+            }
+    }
+    
+    var rightResizeGesture: some Gesture {
+        DragGesture()
+            .onChanged { value in
                 
             }
             .onEnded { value in
